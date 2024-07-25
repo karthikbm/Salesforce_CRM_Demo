@@ -7,13 +7,15 @@
   <null name="startup_services"/>
   <null name="shutdown_services"/>
   <null name="replication_services"/>
-  <null name="requires"/>
-  <null name="listACL"/>
+  <record name="requires" javaclass="com.wm.util.Values">
+    <value name="WmSalesforceProvider">*.*</value>
+  </record>
+  <value name="listACL">Default</value>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
   <null name="build"/>
   <null name="description"/>
   <value name="created_date">25-07-2024 11:48:08 IST</value>
   <null name="extendedProperties"/>
-  <value name="target_server_version">11.1.0.0</value>
+  <null name="target_server_version"/>
 </Values>
