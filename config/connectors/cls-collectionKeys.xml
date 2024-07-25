@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<services>
+    <cloudstreamsCollectionKeys serviceName="WmCloudStreams.SoapVS">
+        <servicesKeys>
+            <keyDetails collectionKey="ConnectorServices:SF_53_Basic_Create_CRM_Account" connectorServiceName="ConnectorServices:SF_53_Basic_Create_CRM_Account"/>
+            <keyDetails collectionKey="ConnectorServices:SF_53_Basic_Get_Account_Details" connectorServiceName="ConnectorServices:SF_53_Basic_Get_Account_Details"/>
+            <keyDetails collectionKey="ConnectorServices:SF_53_Basic_Query_CRM_Accounts" connectorServiceName="ConnectorServices:SF_53_Basic_Query_CRM_Accounts"/>
+        </servicesKeys>
+    </cloudstreamsCollectionKeys>
+</services>
