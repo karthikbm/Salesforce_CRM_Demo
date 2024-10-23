@@ -10,7 +10,9 @@
             <keyDetails collectionKey="ConnectorServices:SF_53_Basic_Create_CRM_Account" connectorServiceName="ConnectorServices:SF_53_Basic_Create_CRM_Account"/>
             <keyDetails collectionKey="ConnectorServices:SF_53_Basic_Get_Account_Details" connectorServiceName="ConnectorServices:SF_53_Basic_Get_Account_Details"/>
             <keyDetails collectionKey="ConnectorServices:SF_53_Basic_Query_CRM_Accounts" connectorServiceName="ConnectorServices:SF_53_Basic_Query_CRM_Accounts"/>
+            <keyDetails collectionKey="ConnectorServices:SF_53_QueryData" connectorServiceName="ConnectorServices:SF_53_QueryData"/>
             <keyDetails collectionKey="ConnectorServices:sf_48_ccs" connectorServiceName="ConnectorServices:sf_48_ccs"/>
+            <keyDetails collectionKey="ConnectorServices:sf_soap_oauth_Accquery_ccs" connectorServiceName="ConnectorServices:sf_soap_oauth_Accquery_ccs"/>
         </servicesKeys>
     </cloudstreamsCollectionKeys>
 </services>

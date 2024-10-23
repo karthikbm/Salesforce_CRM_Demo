@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">CloudStreamsListener</value>
+  <value name="node_subtype">Streaming</value>
+  <value name="node_nsName">Listeners:SF_53_CDC_Event_Listeners</value>
+  <value name="node_pkg">Salesforce_CRM_Demo</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <value name="cloudNodeVersion">1</value>
+  <record name="cloudNodeProperties" javaclass="com.wm.util.Values">
+    <value name="providerName">WmSalesforceProvider</value>
+    <value name="connectorID">com.softwareag.cloudstreams.salesforce_v53</value>
+    <value name="connectionAlias">CS_Connections:SF_Basic_53_ConnA</value>
+    <value name="listenerName">SalesforceCDCEvent</value>
+    <value name="connectionType">bayeux_http_long_polling</value>
+    <record name="connectionGroupProperties" javaclass="com.wm.util.Values">
+      <value name="hp.endpoint">https://d2v000001wg6ueau-dev-ed.my.salesforce.com/cometd/53.0</value>
+      <value name="bu.backoffIncrement">1000</value>
+      <value name="bu.maxBackoff">30000</value>
+      <value name="bu.maxMessageSize">1048576</value>
+      <value name="bu.handshakeRetry">5</value>
+      <value name="bu.handshakeRetryInterval">10000</value>
+      <value name="bu.handshakeTimeout">30000</value>
+      <value name="cx.replayOptions">LAST-RECEIVED</value>
+      <value name="eh.isEnabled">true</value>
+      <value name="eh.errorHandlerServiceName">wmSalesforceConnector_v53.util.listener.services:listenerErrorHandler</value>
+      <value name="eh.retryCount">3</value>
+      <value name="eh.callbackServiceName">wmSalesforceConnector_v53.util.listener.services:listenerCallBackService</value>
+      <value name="eh.runAsUser">Administrator</value>
+    </record>
+    <record name="subscriber" javaclass="com.wm.util.Values">
+      <value name="name">ChangeDataCaptureEventSubscriber</value>
+      <value name="displayName">Change Data Capture Event Subscriber</value>
+      <null name="method"/>
+      <value name="path">/data/{ChangeEvents}</value>
+      <array name="headers" type="record" depth="1">
+      </array>
+      <array name="parameters" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="name">ChangeEvents</value>
+          <value name="dataType">String</value>
+          <value name="type">URI_CONTEXT</value>
+          <value name="defaultValue">ChangeEvents</value>
+          <value name="description">Provide ChangeEvent, ObjectNameChangeEvent or CustomObjectName__ChangeEvent</value>
+          <value name="isRequired">true</value>
+          <value name="isActive">true</value>
+          <value name="isFixed">false</value>
+          <value name="isCustom">false</value>
+          <value name="encodingScope">path</value>
+        </record>
+      </array>
+    </record>
+    <record name="event" javaclass="com.wm.util.Values">
+      <value name="namespace">wmSalesforceConnector_v53.document.listener:cdcEventResponse</value>
+      <value name="clusterMode">multiNode</value>
+      <record name="action" javaclass="com.wm.util.Values">
+        <record name="service" javaclass="com.wm.util.Values">
+          <value name="name">Onprem_Flowservices:ListenerEventProcessing</value>
+          <value name="syncMode">false</value>
+          <value name="runAsUser">Default</value>
+        </record>
+        <record name="log" javaclass="com.wm.util.Values">
+          <null name="level"/>
+        </record>
+      </record>
+    </record>
+    <value name="enabled">true</value>
+    <number name="connectionNodeVersion" type="Integer">1</number>
+  </record>
+</Values>
